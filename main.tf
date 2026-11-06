@@ -103,11 +103,10 @@ module "blog_alb" {
       port     = 80
       protocol = "HTTP"
       forward = {
-        target_group_arn = aws_lb_target_group.blog.arn
+        arn = aws_lb_target_group.blog.arn
       }
     }
   }
-
 
   tags = {
     Environment = "dev"
