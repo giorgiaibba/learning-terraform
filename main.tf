@@ -112,6 +112,8 @@ module "blog_alb" {
   tags = {
     Environment = "dev"
   }
+
+   enable_deletion_protection = false
 }
 
 resource "aws_lb_target_group" "blog" {
