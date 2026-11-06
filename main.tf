@@ -102,7 +102,7 @@ module "blog_alb" {
     blog-http = {
       port     = 80
       protocol = "HTTP"
-      redirect = {
+      forward = {
         target_group_arn = aws_lb_target_group.blog.arn
       }
     }
